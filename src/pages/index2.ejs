@@ -1,0 +1,35 @@
+<link href="style.css" rel="stylesheet" type="text/css">
+<body class="bg">
+<div class="margin"></div>    
+
+<h1>Library </h1>
+
+<div class="margin"></div>  
+
+<form action="/" method="get" class="search">
+    <input class="search" type="text" name="search" placeholder="Book search">
+    <input type="submit" hidden>
+</form>
+
+<table>
+        <tr>
+            <td class="name-column">
+                Book
+            </td>
+            <td class="name-column">
+                Author
+            </td>
+        </tr>
+    <% for (var i=0; i < discs.length; i++) { 
+        var disc = discs[i] %>
+        <tr>
+            <td class="name-column2">
+                <%= disc.name %>
+            </td>
+            <td>
+                <%= disc.author %>
+            </td>
+        </tr>
+        <% } %>
+</table>
+</body>

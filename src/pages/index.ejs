@@ -1,0 +1,50 @@
+<link href="style.css" rel="stylesheet" type="text/css">
+<body class="bg">
+<div class="margin"></div>    
+
+<h1>Library</h1>
+
+<a href="/create" class="newbook">New Book</a>
+
+<div class="margin"></div>  
+
+<form action="/" method="get" class="search">
+    <input class="search" type="text" name="search" placeholder="Book search">
+    <input type="submit" hidden>
+</form>
+
+<table>
+        <tr>
+            <td class="name-column">
+                Book
+            </td>
+            <td class="name-column">
+                Author
+            </td>
+        </tr>
+    <% for (var i=0; i < books.length; i++) { 
+        var book = books[i] %>
+        <tr>
+            <td class="name-column2">
+                <%= book.name %>
+            </td>
+            <td>
+                <%= book.author %>
+            </td>
+            <td class="btnborder">
+                <form action="/update" method="get">
+                    <input type="hidden" name="book" value="<%= (JSON.stringify(book)) %>">
+                    <input type="submit" value="Edit">
+                </form>
+            </td>
+            <td class="btnborder">
+                <form action="/books/delete" onSubmit="return confirm('Confirm deletion?')" 
+                    method="post">
+                    <input type="hidden" name="book" value="<%= (JSON.stringify(book)) %>">
+                    <input type="submit" value="Delete">
+                </form>
+            </td>
+        </tr>
+        <% } %>
+</table>
+</body>

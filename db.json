@@ -1,0 +1,21 @@
+{
+  "discs": [
+    {
+      "id": "VqkJ_jsiaMv03NB8dGKQE",
+      "name": "1984",
+      "author": "George orwell"
+    }
+  ],
+  "books": [
+    {
+      "id": "eiFZ2gduiz3nmdtmPqqN2",
+      "name": "1984",
+      "author": "George orwell"
+    },
+    {
+      "id": "_AenFlA0njMlLRSa_97HT",
+      "name": "a culpa é das estrelas",
+      "author": "john green"
+    }
+  ]
+}

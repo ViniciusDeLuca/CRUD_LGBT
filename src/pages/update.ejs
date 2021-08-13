@@ -1,0 +1,17 @@
+<link href="style.css" rel="stylesheet" type="text/css">
+<body class="bg">
+<div class="top">
+    <h1>Library</h1>
+</div>  
+
+<form action="/books/update" method="post">
+    <input type="hidden" name="id" value="<%= book.id %>">
+    <input type="text" placeholder="Book" name="name" value="<%= book.name %>" required> <br>
+    <input type="text" placeholder="Author" name="author" value="<%= book.author %>" required> <br><br>
+    <input type="submit" value="Update">
+</form>
+
+<div class="margin"></div>  
+
+<a href="/">Home</a>
+</body>
